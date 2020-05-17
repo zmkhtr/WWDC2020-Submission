@@ -52,6 +52,15 @@ class ViewController : UIViewController, PieceDelegate {
         return label
     }()
     
+    let labelImageSource: UILabel = {
+        let label = UILabel()
+        label.text = "All asset created by @daviabelinda, and the dice from flaticon.com - casino pack"
+        label.frame =  CGRect(x: 100,y: 1280,width: 1000,height: 100)
+        label.font = label.font.withSize(14)
+        label.textAlignment = .center
+        return label
+    }()
+    
     let buttonHowToplay: UIButton = {
         let button = UIButton()
         button.setTitle("How to Play?", for: .normal)
@@ -100,6 +109,7 @@ class ViewController : UIViewController, PieceDelegate {
         pieceDelegate = self
         
         view.addSubview(boardView)
+        view.addSubview(labelImageSource)
         view.addSubview(buttonRollTheDice)
         view.addSubview(imageLegend)
         view.addSubview(labelDiceResult)
